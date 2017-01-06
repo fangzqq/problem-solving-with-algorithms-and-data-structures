@@ -130,4 +130,28 @@ class Stack:
         return len(self.items)
 ```
 
+
+## Simple Balanced Parentheses Checker
+
+using stacks to solve a real computer science problem that how to check whether parentheses are correctly balanced or unbalanced in programming language structrues.
+
+```python
+
+def is_par_balanced(str_with_par):
+    s = Stack()
+    
+    for item in str_with_par:
+        if item == '(':
+            s.push(item)
+        elif item == ')':
+            if s.isEmpty():
+                return False
+            else:
+                s.pop()
+        else:
+            pass
+    
+    return s.isEmpty()
+```
+
         
